@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Chioma Christiana | Frontend Developer</title>
+    <meta name="description" content="Read about my journey into frontend development, project breakdowns, and insights on building interactive web experiences.">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header" id="header">
+    <nav class="nav container">
+    <a href="index.html" class="nav__logo">                
+    <span class="logo-text">Chioma</span>
+    </a>
+
+     <div class="theme-toggle">
+     <button id="theme-toggle" class="theme-toggle__btn" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+      </button>
+       </div>                          
+        </nav>
+ </header>
+
+    <section class="blog-header section">
+    <div class="container">
+    <div class="blog-header__content">
+    <h1 class="blog-header__title">Developer Blog</h1>
+    <p class="blog-header__subtitle">Thoughts, tutorials, and insights from my frontend development journey</p>
+     <div class="blog-header__meta">
+     <span class="blog-header__stats">
+     <i class="fas fa-feather"></i>4 Articles
+     </span>
+     <span class="blog-header__stats">
+     <i class="fas fa-clock"></i>Latest: September 2025</span>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <main class="blog-main section">
+    <div class="container">
+    <div class="blog-layout">
+    <div class="blog-articles">
+    <article class="blog-article" id="curiosity-to-code">
+    <header class="blog-article__header">
+    <span class="blog-article__category">Journey</span>
+    <h2 class="blog-article__title">From Curiosity to Code: My Journey into Frontend Development</h2>
+    <div class="blog-article__meta">
+    <span class="blog-article__date">
+    <i class="fas fa-calendar"></i>July 2023
+    </span>
+    <span class="blog-article__read-time">
+    <i class="fas fa-clock"></i>5 min read
+    </span>
+    </div>
+ </header>
+                        
+   <div class="blog-article__content">
+   <p class="blog-article__intro">I didn't start out knowing I'd be a developer—I just wanted to make things look cool. My first encounter with HTML and CSS was pure curiosity. I'd tweak colors, move boxes around, and wonder how websites came to life. That curiosity turned into late nights, tutorials, and a growing obsession with building things from scratch.</p>
+    <p>Over time, I moved from styling static pages to writing JavaScript that made things interactive. I built calculators, chat apps, games—anything that challenged me. Each project taught me something new: how to structure code, how to debug, how to think like a user.</p>
+                            
+     <div class="blog-article__highlight">
+     <h4>Milestones I'm proud of:</h4>
+     <ul class="blog-article__list">
+     <li>Building my first responsive layout from scratch</li>
+     <li>Creating <em>Palettrix</em>, a full-featured color tool</li>
+     <li>Developing <em>NeonXO</em>, a smart Tic Tac Toe game with AI</li>
+      <li>Launching my portfolio site with real projects and personality</li>
+       </ul>
+      </div>
+     <p>Looking back at my earliest projects vs. now, the growth is wild. And I'm just getting started.</p>
+     <div class="blog-article__tags">
+     <span class="blog-tag">#Journey</span>
+     <span class="blog-tag">#Learning</span>
+     <span class="blog-tag">#Frontend</span>
+     </div>
+     </div>
+     <footer class="blog-article__footer">
+     <a href="#vanilla-js" class="button button--primary">
+     <span>Next Article</span>
+     <i class="fas fa-arrow-down"></i>
+     </a>
+     </footer>
+     </article>
+
+     <article class="blog-article" id="vanilla-js">
+     <header class="blog-article__header">
+     <span class="blog-article__category">Development</span>
+      <h2 class="blog-article__title">Why I Love Vanilla JavaScript (And What It's Taught Me)</h2>
+      <div class="blog-article__meta">
+     <span class="blog-article__date">
+     <i class="fas fa-calendar"></i>September 2023
+     </span>
+     <span class="blog-article__read-time">
+     <i class="fas fa-clock"></i>7 min read
+     </span>
+     </div>
+   </header>
+                        
+   <div class="blog-article__content">
+   <p class="blog-article__intro">
+   While everyone was diving into frameworks, I stuck with vanilla JavaScript—and I'm glad I did. It taught me how the browser really works. No shortcuts, no magic—just raw logic and DOM manipulation.
+     </p>
+                            
+    <div class="blog-article__highlight">
+    <h4>With vanilla JS, I built:</h4>
+    <ul class="blog-article__list">
+    <li><em>Kres Chat</em>, a witty chatbot with voice input and emoji support</li>
+    <li><em>Quixie</em>, a quiz app with certificate generation</li>
+    <li><em>Axio Calculator</em>, a clean, offline-capable calculator</li>
+    </ul>
+    </div>
+    <p> I learned how to structure code modularly, handle edge cases, and optimize performance. It gave me confidence to build anything, even without libraries. And now, as I prepare to learn React, I know I'm not just copying patterns—I understand the foundation.
+     </p>
+     <blockquote class="blog-article__quote">
+     Vanilla JS made me a better developer. Period.
+     </blockquote>
+                            
+     <div class="blog-article__tags">
+     <span class="blog-tag">#JavaScript</span>
+     <span class="blog-tag">#Learning</span>
+     <span class="blog-tag">#Fundamentals</span>
+     </div>
+     </div>
+                        
+     <footer class="blog-article__footer">
+     <a href="#palettrix" class="button button--primary">
+     <span>Next Article</span>
+     <i class="fas fa-arrow-down"></i>
+     </a>
+     </footer>
+     </article>
+
+     <article class="blog-article" id="palettrix">
+     <header class="blog-article__header">
+     <span class="blog-article__category">Project Deep Dive</span>
+     <h2 class="blog-article__title">How I Built Palettrix: A Color Tool for Designers</h2>
+     <div class="blog-article__meta">
+     <span class="blog-article__date">
+     <i class="fas fa-calendar"></i>
+     October 2025
+     </span>
+     <span class="blog-article__read-time">
+     <i class="fas fa-clock"></i>
+     8 min read
+     </span>
+     </div>
+     </header>
+                        
+     <div class="blog-article__content">
+     <p class="blog-article__intro">
+     <em>Palettrix</em> started as a simple idea: help designers create beautiful color palettes. But it quickly became a full-blown design system generator with advanced color theory baked in.
+      </p>
+                            
+      <div class="blog-article__highlight">
+      <h4>Key features I built:</h4>
+      <ul class="blog-article__list">
+      <li>Harmony types: Complementary, Analogous, Triadic, etc.</li>
+      <li>Real-time palette generation with locking and history</li>
+      <li>Gradient builder, mood analyzer, and seasonal palettes</li>
+      <li>Export options for CSS, Tailwind, Figma, and more</li>
+      </ul>
+      </div>
+      <p>The hardest part? Building the harmony engine. I had to dive deep into LAB and HSL color spaces to get accurate relationships. I also added accessibility tools like contrast checkers and color blindness simulators.
+      </p>
+      <p>Palettrix taught me how to think like a designer <em>and</em> a developer. It's one of my proudest builds.
+      </p>
+                            
+      <div class="blog-article__project-links">
+      <a href="https://palettrix-ks.vercel.app" target="_blank" class="button button--primary">
+      <i class="fas fa-external-link-alt"></i>
+       <span>Live Demo</span>
+       </a>
+       <a href="https://github.com/Kstiana/Palettrix" target="_blank" class="button button--secondary">
+       <i class="fab fa-github"></i>
+       <span>View Code</span>
+       </a>
+       </div>
+                            
+       <div class="blog-article__tags">
+       <span class="blog-tag">#Project</span>
+       <span class="blog-tag">#ColorTheory</span>
+       <span class="blog-tag">#PWA</span>
+       <span class="blog-tag">#JavaScript</span>
+       </div>
+       </div>
+                        
+       <footer class="blog-article__footer">
+       <a href="#whats-next" class="button button--primary">
+       <span>Next Article</span>
+       <i class="fas fa-arrow-down"></i>
+       </a>
+       </footer>
+       </article>
+
+       <article class="blog-article" id="whats-next">
+       <header class="blog-article__header">
+       <span class="blog-article__category">Future</span>
+       <h2 class="blog-article__title">What's Next for Me as a Developer</h2>
+       <div class="blog-article__meta">
+       <span class="blog-article__date">
+       <i class="fas fa-calendar"></i>
+       November 2025
+       </span>
+       <span class="blog-article__read-time">
+       <i class="fas fa-clock"></i>
+       4 min read
+       </span>
+       </div>
+       </header>
+                        
+       <div class="blog-article__content">
+       <p class="blog-article__intro"> I've built tools, games, and creative apps—but I'm hungry for more.
+       </p>
+                            
+       <div class="blog-article__highlight">
+       <h4>My next goals:</h4>
+       <ul class="blog-article__list">
+       <li>Learn and master <strong>React</strong> for scalable frontend architecture</li>
+       <li>Explore <strong>TypeScript</strong> for safer, more maintainable code</li>
+       <li>Contribute to <strong>open source</strong> and collaborate with other devs</li>
+       <li>Build a full <strong>design system</strong> from scratch</li>
+      <li>Start a <strong>blog series</strong> on frontend tips and project breakdowns</li>
+      <li>Eventually <strong>mentor</strong> others who are just starting out</li>
+      </ul>
+      </div>
+                            
+      <p>I want to keep growing, keep building, and keep sharing. If you've followed my journey so far, thank you. There's so much more to come—and I'm excited to bring you along.
+      </p>
+                            
+      <div class="blog-article__cta">
+      <h4>Let's connect!</h4>
+      <p>Have questions about my journey or want to collaborate? I'd love to hear from you.</p>
+      <a href="index.html#contact" class="button button--primary">
+      <i class="fas fa-paper-plane"></i>
+      <span>Get In Touch</span>
+      </a>
+      </div>
+                            
+      <div class="blog-article__tags">
+      <span class="blog-tag">#Future</span>
+      <span class="blog-tag">#Goals</span>
+      <span class="blog-tag">#Growth</span>
+      </div>
+      </div>
+                        
+      <footer class="blog-article__footer">
+      <button class="button button--secondary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+    <span>Back to Top</span>
+</button>
+      </footer>
+      </article>
+      </div>
+                
+      <aside class="blog-sidebar">
+      <div class="sidebar-widget">
+      <h3 class="sidebar-widget__title">About the Blog</h3>
+      <p>Sharing my journey from curious beginner to passionate frontend developer. Join me as I build, learn, and grow in the world of web development.</p>
+     </div>
+                    
+     <div class="sidebar-widget">
+     <h3 class="sidebar-widget__title">Article Series</h3>
+    <nav class="sidebar-nav">
+    <a href="#curiosity-to-code" class="sidebar-nav__link active">
+    <i class="fas fa-play-circle"></i>
+    From Curiosity to Code
+    </a>
+    <a href="#vanilla-js" class="sidebar-nav__link">
+    <i class="fab fa-js-square"></i>
+    Vanilla JavaScript Love
+    </a>
+    <a href="#palettrix" class="sidebar-nav__link">
+    <i class="fas fa-palette"></i>
+    Palettrix Deep Dive
+    </a>
+    <a href="#whats-next" class="sidebar-nav__link">
+    <i class="fas fa-road"></i>
+    What's Next
+    </a>
+    </nav>
+    </div>
+                    
+    <div class="sidebar-widget">
+    <h3 class="sidebar-widget__title">Popular Tags</h3>
+    <div class="sidebar-tags">
+    <span class="sidebar-tag">JavaScript</span>
+    <span class="sidebar-tag">CSS</span>
+    <span class="sidebar-tag">Projects</span>
+    <span class="sidebar-tag">Learning</span>
+    <span class="sidebar-tag">PWA</span>
+    <span class="sidebar-tag">Design</span>
+    </div>
+    </div>
+                    
+    <div class="sidebar-widget">
+    <h3 class="sidebar-widget__title">Stay Updated</h3>
+    <p>New articles coming soon on React, TypeScript, and more project breakdowns!</p>
+    <a href="index.html#contact" class="button button--primary button--small">
+    <i class="fas fa-envelope"></i>
+    <span>Subscribe</span>
+    </a>
+    </div>
+    </aside>
+    </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+     <div class="container">
+     <div class="footer__container grid">                                              
+     <ul class="footer__list">
+     <li><a href="index.html" class="footer__link">Home</a></li>                        
+     </ul>
+     </div>
+                
+     <div class="footer__cta">
+     <h3 class="footer__title">Enjoyed the read?</h3
+     <a href="index.html#contact" class="button button--primary">
+    <span>Let's Connect</span>
+    <i class="fas fa-paper-plane"></i>
+    </a>
+    </div>
+    </div>
+            
+    <div class="footer__bottom">
+    <p class="footer__copy">&copy; 2025 Chioma Christiana. All rights reserved.
+    </p>
+    <div class="footer__social">
+    <a href="#" class="footer__social-link" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+    </a>
+    <a href="#" class="footer__social-link" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#" class="footer__social-link" aria-label="Twitter">
+    <i class="fab fa-twitter"></i>
+    </a>
+    </div>
+    </div>
+    </div>
+    </footer>
+    
+    <div class="accessibility-toolbar">
+    <button id="high-contrast-toggle" class="accessibility-btn" aria-label="Toggle high contrast mode">
+    <i class="fas fa-circle"></i>
+    </button>
+    <button id="font-size-increase" class="accessibility-btn" aria-label="Increase font size">
+    <i class="fas fa-text-height"></i>
+    </button>
+    <button id="font-size-decrease" class="accessibility-btn" aria-label="Decrease font size">
+    <i class="fas fa-text-width"></i>
+    </button>
+    </div>
+
+    <script src="scripts/theme-switcher.js"></script>
+    <script src="scripts/blog.js"></script>
+</body>
+</html>

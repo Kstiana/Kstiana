@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chioma Christiana - Frontend Developer</title>
+    <meta name="description" content="Chioma Christiana - Frontend Developer crafting interactive, accessible, and visually stunning web experiences. I don't just write code—I craft experiences.">
+   <meta name="author" content="Chioma Christiana">
+   <meta property="og:title" content="Chioma Christiana - Frontend Developer">
+   <meta property="og:description" content="Frontend Developer crafting interactive, accessible web experiences">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://kstiana.netlify.app">
+   <meta property="og:image" content="https://kstiana.netlify.app/assets/profile.jpg">
+   <meta property="og:image:width" content="1200">
+   <meta property="og:image:height" content="630">
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:creator" content="@KsTiana1">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6366f1">
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/cursor-style.css">
+    <link rel="icon" href="assets/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">    
+    <link rel="preload" href="assets/profile.jpg" as="image">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chioma Christiana",
+      "jobTitle": "Frontend Developer",
+      "url": "https://kstiana.netlify.app",
+      "email": "kstiana1@gmail.com",
+      "telephone": "+234-816-484-5541",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Anambra",
+        "addressCountry": "NG"
+      },
+      "sameAs": [
+        "https://github.com/Kstiana",
+        "https://x.com/KsTiana1"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+    <div class="logo-loader">
+    <div class="loader-spinner"></div>
+</div>
+    <p>Loading amazing experiences...</p>
+</div>
+</div>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" id="header">
+    <nav class="nav container">
+    <a href="#home" class="nav__logo">                
+    <span class="logo-text">Chioma</span>
+    </a>
+            
+    <div class="nav__menu" id="nav-menu">
+    <ul class="nav__list">
+    <li class="nav__item">
+    <a href="#home" class="nav__link active">Home</a>
+    </li>
+    <li class="nav__item">
+    <a href="#projects" class="nav__link">Projects</a>
+    </li>
+    <li class="nav__item">
+    <a href="#services" class="nav__link">Services</a>
+    </li>
+    <li class="nav__item">
+    <a href="#skills" class="nav__link">Skills</a>
+    </li>    
+    <li class="nav__item">
+    <a href="#experience" class="nav__link">Experience</a>
+    </li>
+    <li class="nav__item">
+    <a href="#blog" class="nav__link">Blog</a>
+    </li>
+    <li class="nav__item">
+    <a href="#about" class="nav__link">About</a>  
+    </li>
+    <li class="nav__item">
+    <a href="#contact" class="nav__link">Contact</a>
+    </li>
+</ul>
+
+     <div class="theme-toggle">
+     <button id="theme-toggle" class="theme-toggle__btn" aria-label="Toggle theme">
+     <i class="fas fa-moon"></i>
+     </button>
+     </div>
+                
+     <div class="nav__close" id="nav-close">
+     <i class="fas fa-times"></i>
+     </div>
+     </div>
+
+     <div class="nav__toggle" id="nav-toggle">
+     <i class="fas fa-bars"></i>
+     </div>
+    </nav>
+    </header>
+
+    <div class="scroll-progress" id="scroll-progress">
+    <div class="scroll-progress__bar" id="scroll-progress-bar">
+    <div class="scroll-progress__fill"></div>
+    <div class="scroll-progress__percentage">0%</div>
+    </div>
+    <div class="scroll-progress__circle" id="scroll-progress-circle">
+    <svg width="60" height="60" viewBox="0 0 60 60">
+    <circle class="scroll-progress__circle-bg" cx="30" cy="30" r="28"/>
+    <circle class="scroll-progress__circle-fill" cx="30" cy="30" r="28"/>
+    <text class="scroll-progress__circle-text" x="30" y="35" text-anchor="middle">0%</text>
+    </svg>
+    </div>
+    <div class="scroll-progress__controls">
+    <button class="scroll-progress__toggle" id="progress-toggle" aria-label="Toggle progress indicator">
+    <i class="fas fa-chevron-up"></i>
+    </button>
+    <button class="scroll-progress__mode" id="progress-mode" aria-label="Change progress display mode">
+    <i class="fas fa-sliders-h"></i>
+    </button>
+    </div>
+</div>
+
+    <main id="main-content">
+    <section class="hero section" id="home">
+    <div class="hero__container container grid">
+    <div class="hero__content">
+    <span class="hero__greeting" id="dynamic-greeting">Hello there! 👋</span>
+    <h1 class="hero__title">I'm <span class="hero__name">Chioma Christiana</span>
+    </h1>
+    <h2 class="hero__subtitle">Frontend Developer
+    </h2>
+    <p class="hero__description">I don't just write code—I craft experiences. Every pixel, every interaction, is intentional. I build with empathy, ensuring that users not only see but <em>feel</em> the experience.
+     </p>
+                    
+     <div class="hero__buttons">
+     <a href="#projects" class="button button--primary">
+     <span>View My Work</span>
+     <i class="fas fa-arrow-down"></i>
+     </a>
+     <a href="#contact" class="button button--secondary">
+     <span>Get In Touch</span>
+     <i class="fas fa-paper-plane"></i></a>
+     </div>
+                    
+     <div class="hero__social">
+     <a href="https://github.com/Kstiana" class="hero__social-link" aria-label="GitHub">
+     <i class="fab fa-github"></i>
+     </a>
+     <a href="https://m.facebook.com/profile.php?id=61582375997402" class="hero__social-link" aria-label="Facebook">
+     <i class="fab fa-facebook"></i>
+     </a>
+     <a href="https://x.com/KsTiana1" class="hero__social-link" aria-label="Twitter">
+     <i class="fab fa-twitter"></i>
+     </a>
+     </div>
+     </div>
+                
+     <div class="hero__image">
+     <div class="image-container">
+     <img src="assets/profile.jpg" alt="Chioma Christiana" class="profile-image">
+     <div class="image-overlay"></div>
+     <div class="floating-elements">
+     <div class="floating-element element-1">🎨</div>
+     <div class="floating-element element-2">💻</div>
+    <div class="floating-element element-3">🚀</div>
+    </div>
+    </div>
+    </div>
+    </div>
+            
+    <div class="scroll-indicator">
+    <div class="scroll-indicator__mouse">
+    <div class="scroll-indicator__wheel"></div>
+    </div>
+    <p>Scroll to explore</p>
+    </div>
+</section>
+
+    <section class="projects section" id="projects">
+    <div class="container">
+    <div class="section__header">
+    <h2 class="section__title">Featured Projects</h2>
+    <p class="section__subtitle">A collection of projects that showcase my skills and passion for development</p>
+    </div>
+
+    <div class="projects__filters">
+    <button class="projects__filter active" data-filter="all">All Projects</button>
+    <button class="projects__filter" data-filter="pwa">PWA</button>
+    <button class="projects__filter" data-filter="game">Games</button>
+    <button class="projects__filter" data-filter="tool">Tools</button>
+    <vbutton class="projects__filter" data-filter="ai">AI/ML</button>
+     </div>
+                
+    <div class="projects__grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+   <section class="skills section" id="skills">
+   <div class="container">
+   <div class="section__header">
+   <h2 class="section__title">Skills & Technologies</h2>
+   <p class="section__subtitle">The tools and technologies I use to bring ideas to life</p>
+   </div>
+                
+   <div class="skills__container grid"></div>
+   </div>
+   </section>
+
+   <section class="experience section" id="experience">
+   <div class="container">
+   <div class="section__header">
+   <h2 class="section__title">My Journey</h2>
+   <p class="section__subtitle">From curiosity to code - my path in frontend development</p>
+   </div>
+                
+   <div class="experience__timeline"></div>
+   <div class="learning-journey">
+   <h3 class="learning-journey__title">Learning Philosophy</h3>
+   <p class="learning-journey__text">"I've learned frontend development through hands-on projects, deep dives into documentation, and constant iteration. Every line of code reflects my commitment to mastering the craft."</p>
+   </div>
+    <div class="resume-cta">
+    <div class="resume-cta__content">
+    <h3 class="resume-cta__title">Want to know more?</h3>
+    <p class="resume-cta__text">My detailed resume is coming soon!</p>
+    <button class="button button--disabled" disabled>
+    <span>Download Resume</span>
+    <i class="fas fa-download"></i>
+    </button>
+    <small class="resume-cta__note">Resume download available soon</small>
+    </div>
+    </div>
+    </div>
+</section>
+
+    <section class="blog section" id="blog">
+    <div class="container">
+    <div class="section__header">
+    <h2 class="section__title">Latest Thoughts</h2>
+    <p class="section__subtitle">Sharing knowledge, experiences, and insights on frontend development</p>
+    </div>
+                
+   <div class="blog__grid"></div>
+   <div class="blog__cta">
+   <a href="blog.html" class="button button--primary">
+   <span>Read All Articles</span>
+   <i class="fas fa-arrow-right"></i>
+   </a>
+   </div>
+   </div>
+</section>
+
+<section class="about section" id="about">
+    <div class="container">
+    <div class="section__header">
+    <h2 class="section__title">About Me</h2>
+    <p class="section__subtitle">The person behind the code</p>
+    </div>
+        
+    <div class="about__container grid">
+    <div class="about__content">
+    <div class="about__text">
+    <p>I'm <strong>Chioma</strong>—a frontend developer who fell in love with creating digital experiences that aren't just functional, but truly delightful.</p>
+    <p>I didn't grow up dreaming of writing code. I just wanted to make things that looked cool. That curiosity led me to HTML and CSS, and before I knew it, I was staying up late tweaking layouts, debugging JavaScript, and falling in love with the magic of the browser.</p>
+     <p>Today, I specialize in crafting <strong>responsive, accessible, and interactive interfaces</strong>using HTML5, CSS3, and vanilla JavaScript. I'm always exploring new ways to make the web more inclusive and performant. What excites me most is turning complex challenges into intuitive, user-friendly solutions.</p>
+      <p>Right now, I'm diving into <strong>React and TypeScript</strong> to level up my frontend architecture skills. I'm also passionate about sharing what I learn—whether through blog posts or helping others just starting out.</p>
+      <p>When I'm not coding, you'll find me exploring new tech, watching movies, or vibing to something fresh while sketching out my next creative project.</p>
+      </div>
+      </div>
+
+      <div class="about__sidebar">
+      <div class="about__card">
+      <h3 class="about__card-title">Currently Learning</h3>
+      <div class="about__skills-preview">
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">TypeScript</span>
+      <span class="skill-tag">Next.js</span>
+      <span class="skill-tag">Advanced CSS</span>
+      </div>
+      </div>
+                
+      <div class="about__card">
+      <h3 class="about__card-title">My Approach</h3>
+      <ul class="about__list">
+      <li>Mobile-first responsive design</li>
+      <li>Clean, semantic HTML</li>
+      <li>Accessibility as priority</li>
+      <li>Performance optimization</li>
+      <li>User-centered development</li>
+      </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+   <section class="contact section" id="contact">
+   <div class="container">
+   <div class="section__header">
+   <h2 class="section__title">Let's Work Together</h2>
+   <p class="section__subtitle">Ready to bring your next project to life? Let's connect!</p>
+   </div>
+   <div class="contact__container grid">
+   <div class="contact__info">
+   <h3 class="contact__info-title">Get In Touch</h3>
+   <p class="contact__info-description">I'm always open to discussing new opportunities, creative projects, or just having a friendly chat about frontend development.</p>
+    <div class="contact__details">
+    <div class="contact__detail">
+    <i class="fas fa-envelope"></i>
+    <div>
+    <h4>Email</h4>
+    <a href="mailto:kstiana1@gmail.com">kstiana1@gmail.com</a>
+    </div>
+    </div>
+    <div class="contact__detail">
+    <i class="fas fa-phone"></i>
+    <div>
+    <h4>Phone</h4>
+    <a href="tel:+2348164845541">+234 816 484 5541</a>
+    </div>
+    </div>
+    <div class="contact__detail">
+    <i class="fas fa-map-marker-alt"></i>
+    <div>
+    <h4>Location</h4>
+    <span>Anambra, Nigeria</span>
+    </div>
+    </div>
+    </div>
+    <div class="contact__social">
+    <a href="https://github.com/Kstiana" class="contact__social-link" aria-label="GitHub">
+   <i class="fab fa-github"></i>
+   </a>
+   <a href="https://m.facebook.com/profile.php?id=61582375997402" class="hero__social-link" aria-label="Facebook">
+   <i class="fab fa-facebook"></i>
+   <a href="https://x.com/KsTiana1" class="contact__social-link" aria-label="Twitter">
+   <i class="fab fa-twitter"></i>
+   </a>
+   </div>
+   </div>
+   <div class="contact__form">
+    <form id="contact-form" class="form" netlify name="contact">
+    <input type="hidden" name="form-name" value="contact" />
+    <div class="form__group">
+    <label for="name" class="form__label">Name</label>
+    <input type="text" id="name" name="name" class="form__input" required>
+    </div>
+    <div class="form__group">
+    <label for="email" class="form__label">Email</label>
+    <input type="email" id="email" name="email" class="form__input" required>
+    </div>
+    <div class="form__group">
+    <label for="subject" class="form__label">Subject</label>
+    <input type="text" id="subject" name="subject" class="form__input" required>
+    </div>
+    <div class="form__group">
+    <label for="message" class="form__label">Message</label>
+    <textarea id="message" name="message" class="form__textarea" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="button button--primary form__submit">
+    <span>Send Message</span>
+     <i class="fas fa-paper-plane"></i>
+     </button>
+    </form>
+</div>
+    </div>
+    </div>
+   </section>
+  </main>
+
+    <footer class="footer">
+    <div class="container">
+    <div class="footer__container grid">
+    <div class="footer__content">
+    <a href="#home" class="footer__logo">
+    <span>Chioma Christiana</span>
+    </a>
+    <p class="footer__description">Frontend Developer crafting interactive, accessible, and visually stunning web experiences.
+    </p>
+    </div>
+    <div class="footer__links">
+    <h3 class="footer__title">Quick Links</h3>
+    <ul class="footer__list">
+    <li><a href="#home" class="footer__link">Home</a></li>
+    <li><a href="#projects" class="footer__link">Projects</a></li>
+    <li><a href="#services" class="footer__link">Services</a></li>
+     <li><a href="#skills" class="footer__link">Skills</a></li>        
+     <li><a href="#experience" class="footer__link">Experience</a></li>
+     <li><a href="#blog" class="footer__link">Blog</a></li>
+     <li><a href="#about" class="footer__link">About</a></li>
+      <li><a href="#contact" class="footer__link">Contact</a></li>
+    </ul>
+</div>
+    <div class="footer__cta">
+    <h3 class="footer__title">Ready to create something amazing?</h3>
+    <a href="#contact" class="button button--primary">
+    <span>Start a Project</span>
+    <i class="fas fa-rocket"></i>
+    </a>
+    </div>
+    </div>
+            
+   <div class="footer__bottom">
+   <p class="footer__copy">&copy; 2025 Chioma Christiana. All rights reserved.</p>
+   </div>
+   </div>
+   </footer>
+
+    <div id="project-modal" class="modal">
+    <div class="modal__content">
+    <button class="modal__close" id="modal-close">
+    <i class="fas fa-times"></i>
+    </button>
+    <div class="modal__body" id="modal-body">
+     </div>
+     </div>
+     </div>
+
+    <div class="accessibility-toolbar">
+    <button id="high-contrast-toggle" class="accessibility-btn" aria-label="Toggle high contrast mode">
+    <i class="fas fa-circle"></i>
+    </button>
+    <button id="font-size-increase" class="accessibility-btn" aria-label="Increase font size">
+     <i class="fas fa-text-height"></i>
+     </button>
+     <button id="font-size-decrease" class="accessibility-btn" aria-label="Decrease font size">
+      <i class="fas fa-text-width"></i>
+     </button>
+    </div>
+
+   <script src="scripts/loading-screen.js"></script>
+   <script src="scripts/theme-switcher.js"></script>
+   <script src="scripts/scrollspy.js"></script>
+   <script src="scripts/project-filter.js"></script>
+   <script src="scripts/modal-viewer.js"></script>
+   <script src="scripts/skill-meter.js"></script>
+   <script src="scripts/scroll-progress.js"></script>
+   <script src="scripts/microinteractions.js"></script>
+   <script src="scripts/timeline.js"></script>
+   <script src="scripts/konami-easteregg.js"></script>
+   <script src="scripts/geolocation-greeting.js"></script>
+   <script src="scripts/service-offers.js"></script>
+   <script src="data/project-data.js"></script>
+   <script src="scripts/script.js"></script>
+</body>
+</html>
