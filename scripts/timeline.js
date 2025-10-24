@@ -193,16 +193,6 @@ class Timeline {
     }
     
     bindEvents() {
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-                e.preventDefault();
-                this.navigateTimeline(1);
-            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-                e.preventDefault();
-                this.navigateTimeline(-1);
-            }
-        });
-        
         const timelineLinks = document.querySelectorAll('a[href="#experience"]');
         timelineLinks.forEach(link => {
             link.addEventListener('click', () => {
