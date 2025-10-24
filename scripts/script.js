@@ -313,46 +313,167 @@ function initializeContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) return;
     
-    contactForm.addEventListener('submit', function(e) {
-        // Basic validation BEFORE allowing Netlify to handle submission
+    initializeCharacterCounter();
+    
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const subject = document.getElementById('subject').value.trim();
         const message = document.getElementById('message').value.trim();
         
         if (!name || !email || !subject || !message) {
-            e.preventDefault(); // Only prevent if validation fails
             showNotification('Please fill in all fields.', 'error');
             return;
         }
         
         if (!isValidEmail(email)) {
-            e.preventDefault(); // Only prevent if validation fails
             showNotification('Please enter a valid email address.', 'error');
             return;
         }
-        
-        // Message length validation (1000 characters max)
+
         if (message.length > 1000) {
-            e.preventDefault(); // Only prevent if validation fails
             showNotification('Message should not exceed 1000 characters.', 'error');
             return;
         }
-        
-        // If validation passes, let Netlify handle the submission
-        // Show loading state
+
         const submitButton = contactForm.querySelector('.form__submit');
         const originalText = submitButton.innerHTML;
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Sending...</span>';
         submitButton.disabled = true;
         
-        // Netlify will redirect to a success page, but we can't catch it easily
-        // So we'll reset the button after a timeout
-        setTimeout(() => {
+        try {
+            const formData = new FormData(contactForm);
+
+            const response = await fetch('/', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/x-www-form-urlencoded' 
+                },
+                body: new URLSearchParams(formData).toString()
+            });
+            
+            if (response.ok) {
+                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                contactForm.reset(); 
+                resetCharacterCounter();
+            } else {
+                throw new Error('Failed to send message');
+            }
+            
+        } catch (error) {
+            showNotification('Failed to send message. Please email me directly at kstiana1@gmail.com', 'error');
+            console.error('Form submission error:', error);
+        } finally {
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
-        }, 3000);
+        }
     });
+}
+
+function initializeCharacterCounter() {
+    const messageField = document.getElementById('message');
+    if (!messageField) return;
+
+    const counter = document.createElement('div');
+    counter.className = 'character-counter';
+    counter.innerHTML = `
+        <span class="character-count">0</span>
+        <span class="character-limit">/ 1000</span>
+    `;
+
+    messageField.parentNode.appendChild(counter);
+
+    messageField.addEventListener('input', function() {
+        updateCharacterCounter(this, counter);
+    });
+
+    updateCharacterCounter(messageField, counter);
+}
+
+function updateCharacterCounter(field, counter) {
+    const count = field.value.length;
+    const countElement = counter.querySelector('.character-count');
+    const limit = 1000;
+    
+    countElement.textContent = count;
+
+    if (count > limit * 0.9) { 
+        counter.classList.add('near-limit');
+        counter.classList.remove('over-limit');
+    } else if (count > limit) { 
+        counter.classList.add('over-limit');
+        counter.classList.remove('near-limit');
+    } else { 
+        counter.classList.remove('near-limit', 'over-limit');
+    }
+}
+
+function resetCharacterCounter() {
+    const counter = document.querySelector('.character-counter');
+    if (counter) {
+        const countElement = counter.querySelector('.character-count');
+        countElement.textContent = '0';
+        counter.classList.remove('near-limit', 'over-limit');
+    }
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function showNotification(message, type = 'info') {
+
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    const notification = document.createElement('div');
+    notification.className = `notification notification--${type}`;
+    notification.innerHTML = `
+        <div class="notification__content">
+            <i class="fas fa-${type === 'success' ? 'check' : 'exclamation'}-circle"></i>
+            <span>${message}</span>
+        </div>
+        <button class="notification__close">
+            <i class="fas fa-times"></i>
+        </button>
+    `;
+
+    notification.style.cssText = `
+        position: fixed;
+        top: 100px;
+        right: 20px;
+        background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#3b82f6'};
+        color: white;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        max-width: 400px;
+        animation: slideInRight 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+
+    const closeBtn = notification.querySelector('.notification__close');
+    closeBtn.addEventListener('click', () => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => notification.remove(), 300);
+    });
+
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.style.animation = 'slideOutRight 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        }
+    }, 5000);
 }
 
 function initializeAccessibility() {
