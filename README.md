@@ -33,41 +33,11 @@ A modern, responsive portfolio website showcasing my frontend development skills
 - **Forms:** Netlify Forms
 - **Fonts:** Inter, Fira Code
 
-Portfolio Structure
-├── 📁 assets/
-│    ├── icon.png
-│    └── profile.jpg
-│
-├── 📁 project-thumbnails/
-│   └── project-thumbnails...
-│
-├── 📁 styles/
-│   ├── style.css
-│   └── blog.css
-│
-├── 📁 scripts/
-│   ├── script.js
-│   ├── theme-switcher.js
-│   ├── scrollspy.js
-│   ├── project-filter.js
-│   ├── modal-viewer.js
-│   ├── skill-meter.js
-│   ├── loading-screen.js
-│   ├── timeline.js
-│   ├── scroll-progress.js
-│   ├── microinteractions.js
-│   ├── konami-easteregg.js
-│   ├── geolocation-greeting.js
-│   ├── service-offers.js
-│   └── blog.js
-│
-├── 📁 data/
-│   ├── project-data.js
-│
-├── index.html
-├── blog.html
-│
-└── README.md
+## 📁 Project Structure
+
+```
+
+Portfolio/ ├──📁 assets/ │├── icon.png │└── profile.jpg │ ├──📁 project-thumbnails/ │└── project1-thumb.jpg, project2-thumb.jpg, ... │ ├──📁 styles/ │├── style.css          # Main stylesheet with CSS variables │└── blog.css           # Blog page specific styles │ ├──📁 scripts/ │├── script.js                  # Main initialization script │├── theme-switcher.js          # Dark/light theme functionality │├── scrollspy.js               # Navigation active state │├── project-filter.js          # Project categorization & filtering │├── modal-viewer.js            # Project detail modals │├── skill-meter.js             # Animated skill progress bars │├── loading-screen.js          # Pre-loader animation │├── timeline.js                # Experience timeline │├── scroll-progress.js         # Scroll progress indicator │├── microinteractions.js       # Hover effects & animations │├── konami-easteregg.js        # Secret cheat code features │├── geolocation-greeting.js    # Dynamic greeting based on location │├── service-offers.js          # Services section functionality │└── blog.js                    # Blog page interactions │ ├──📁 data/ │└── project-data.js    # Project information and metadata │ ├──index.html             # Main portfolio page ├──blog.html             # Blog page └──README.md             # Project documentation
 
 ```
 
