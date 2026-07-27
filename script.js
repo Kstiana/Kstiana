@@ -156,8 +156,12 @@
 
     function getInitialTheme() {
   const saved = localStorage.getItem(STORAGE_KEY);
-  if (saved === 'light' || saved === 'dark') return saved;
-  return 'light'; 
+
+  if (saved === 'light' || saved === 'dark') {
+    return saved;
+  }
+
+  return prefersDark.matches ? 'dark' : 'light';
 }
 
     function applyTheme(theme) {
